@@ -45,6 +45,86 @@ const perguntas = [
         ]
     },
     // Adicione mais perguntas e alternativas relacionadas ao Flamengo aqui
+    {
+        enunciado: "Quantos títulos nacionais o Flamengo conquistou?",
+        alternativas: [
+            {
+                texto: "7",
+                afirmacao: "Você sabe que o Flamengo conquistou 7 títulos brasileiros ao longo de sua história!"
+            },
+            {
+                texto: "10",
+                afirmacao: "Apesar de ser um número expressivo, o Flamengo conquistou 7 títulos nacionais."
+            }
+        ]
+    },
+    {
+        enunciado: "Qual foi o primeiro título internacional conquistado pelo Flamengo?",
+        alternativas: [
+            {
+                texto: "Copa Libertadores",
+                afirmacao: "O Flamengo conquistou sua primeira Libertadores em 1981, um marco na história do clube!"
+            },
+            {
+                texto: "Mundial Interclubes",
+                afirmacao: "O Mundial Interclubes foi conquistado posteriormente, em 1981, após a Libertadores."
+            }
+        ]
+    },
+    {
+        enunciado: "Quem foi o técnico do Flamengo na conquista da Libertadores de 2019?",
+        alternativas: [
+            {
+                texto: "Jorge Jesus",
+                afirmacao: "Jorge Jesus foi o técnico responsável por levar o Flamengo à glória na Libertadores de 2019!"
+            },
+            {
+                texto: "Abel Braga",
+                afirmacao: "Abel Braga teve passagem pelo Flamengo, mas não foi o técnico na conquista da Libertadores."
+            }
+        ]
+    },
+    // Continue adicionando mais perguntas aqui...
+    {
+        enunciado: "Quem é conhecido como 'Rei do Rio'?",
+        alternativas: [
+            {
+                texto: "Zico",
+                afirmacao: "Zico é chamado de 'Rei do Rio' pela sua idolatria e conquistas pelo Flamengo!"
+            },
+            {
+                texto: "Gabigol",
+                afirmacao: "Gabigol é um jogador muito querido, mas 'Rei do Rio' é o apelido de Zico."
+            }
+        ]
+    },
+    {
+        enunciado: "Em que ano o Flamengo foi fundado?",
+        alternativas: [
+            {
+                texto: "1895",
+                afirmacao: "O Flamengo foi fundado em 1895, tornando-se um dos clubes mais antigos do Brasil!"
+            },
+            {
+                texto: "1912",
+                afirmacao: "O ano de 1912 é importante, mas não é quando o Flamengo foi fundado."
+            }
+        ]
+    },
+    {
+        enunciado: "Qual é o mascote oficial do Flamengo?",
+        alternativas: [
+            {
+                texto: "Urubu",
+                afirmacao: "O mascote oficial do Flamengo é o Urubu, uma representação marcante do clube!"
+            },
+            {
+                texto: "Leão",
+                afirmacao: "O Leão é um mascote de outro clube, não do Flamengo."
+            }
+        ]
+    },
+    // Adicione mais perguntas e alternativas relacionadas ao Flamengo conforme necessário...
 ];
 
 let atual = 0;
