@@ -6,6 +6,70 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
+        enunciado: "Qual foi o ano da última conquista de Libertadores pelo Flamengo?",
+        alternativas: [
+            {
+                texto: "2019",
+                afirmacao: "Você vibrou intensamente com a conquista épica de 2019!"
+            },
+            {
+                texto: "2022",
+                afirmacao: "Infelizmente, o Flamengo ainda não conquistou outra Libertadores desde 2019."
+            }
+        ]
+    },
+    {
+        enunciado: "Quem é o maior ídolo da história do Flamengo?",
+        alternativas: [
+            {
+                texto: "Zico",
+                afirmacao: "Você idolatra Zico, o maior jogador da história do Flamengo!"
+            },
+            {
+                texto: "Bruno Henrique",
+                afirmacao: "Bruno Henrique é um jogador muito querido, mas Zico ainda é o maior ídolo."
+            }
+        ]
+    },
+    {
+        enunciado: "Qual o estádio do Flamengo?",
+        alternativas: [
+            {
+                texto: "Maracanã",
+                afirmacao: "Você ama o Maracanã, o lar do Flamengo!"
+            },
+            {
+                texto: "Morumbi",
+                afirmacao: "O Morumbi é um estádio incrível, mas o Maracanã é o coração do Flamengo."
+            }
+        ]
+    },
+    // Adicione mais perguntas e alternativas relacionadas ao Flamengo aqui
+];
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = "";
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+
+function mostraAlternativas(){const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
+
+const perguntas = [
+    {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
             {
@@ -63,32 +127,7 @@ const perguntas = [
             {
                 texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
                 afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
-            },
-            {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
-            }
-        ]
-    },
-];
 
-
-let atual = 0;
-let perguntaAtual;
-let historiaFinal = "";
-
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
-    }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
-}
-
-function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
@@ -105,7 +144,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "História Rubro-Negra...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
